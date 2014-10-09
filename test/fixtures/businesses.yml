@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yelp_business_id: MyString
+  name: MyString
+  full_address: MyString
+  city: MyString
+  state: MyString
+  stars: 1.5
+
+two:
+  yelp_business_id: MyString
+  name: MyString
+  full_address: MyString
+  city: MyString
+  state: MyString
+  stars: 1.5

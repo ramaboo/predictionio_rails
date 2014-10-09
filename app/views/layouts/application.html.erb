@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PredictionioRails</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>PredictionIO Sample Rails Application</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="jumbotron">
+    <div class="container">
+      <header>
+        <% if Rails.env.production? %>
+          <iframe class="pull-right" src="http://ghbtns.com/github-btn.html?user=ramaboo&repo=predictionio_rails&type=fork&count=true&size=large"
+            allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+        <% end %>
+        <h1><a href="<%= root_path %>">PredictionIO</a></h1>
+        <h2>Sample Rails Application</h2>
+      </header>
+    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <footer>
+    <div class="container">
+      <p class="text-center">
+        Back to <a href="http://prediction.io/">PredictionIO</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

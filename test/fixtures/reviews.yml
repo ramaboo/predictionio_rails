@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yelp_business_id: MyString
+  yelp_user_id: MyString
+  stars: 1.5
+  review_text: MyText
+  reviewed_on: 2014-10-06
+
+two:
+  yelp_business_id: MyString
+  yelp_user_id: MyString
+  stars: 1.5
+  review_text: MyText
+  reviewed_on: 2014-10-06

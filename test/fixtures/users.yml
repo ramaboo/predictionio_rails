@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yelp_user_id: MyString
+  name: MyString
+  average_stars: 
+
+two:
+  yelp_user_id: MyString
+  name: MyString
+  average_stars: 

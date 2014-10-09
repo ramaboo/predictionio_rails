@@ -1,0 +1,50 @@
+<div class="col-sm-7">
+  <h2>User <%= link_to @user.name, @user %></h2>
+  <p>
+    <b>Review Count:</b> <%= @user.reviews.size %>
+  </p>
+  <p>
+    <b>Average Stars:</b> <%= @user.average_stars %>
+  </p>
+  <h2>Recommended Businesses</h2>
+  <h3>Based on <a href="http://prediction.io/">PredictionIO</a></h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Business Name</th>
+      <th>Score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @recommendations.each do |recommendation| %>
+      <tr>
+        <td><%= recommendation[:business].id %></td>
+        <td><%= recommendation[:business].name %></td>
+        <td><%= recommendation[:score] %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="col-sm-5">
+  <h3>Recent Reviews</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Business Name</th>
+      <th>Stars</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @recent_reviews.each do |review| %>
+      <tr>
+        <td><%= review.id %></td>
+        <td><%= review.business.name %></td>
+        <td><%= review.stars %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

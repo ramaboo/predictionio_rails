@@ -17,3 +17,6 @@
 
 # Database config.
 config/database.yml
+
+# Don't check the data files into Git.
+/data
