@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @recent_reviews = @user.reviews.includes(:business).order('created_at DESC').limit(10)
 
     # Create new PredictionIO client.
-    client = PredictionIO::EngineClient.new(ENV['PIO_APP_ID'].to_i, ENV['PIO_URL'])
+    client = PredictionIO::EngineClient.new(ENV['PIO_DEPLOY_URL'])
 
     # Query PredictionIO for 5 recommendations!
     object = client.send_query('uid' => @user.id, 'n' => 5)
