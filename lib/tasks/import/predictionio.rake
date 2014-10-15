@@ -1,9 +1,7 @@
-# The value of `appId` in $POI_HOME/io.prediction.engines.itemrec/params/datasource.json.
-PIO_APP_ID = 1
 namespace :import do
   desc 'Send the data to PredictionIO'
   task predictionio: :environment do
-    client = PredictionIO::EventClient.new(PIO_APP_ID)
+    client = PredictionIO::EventClient.new(ENV['PIO_APP_ID'], ENV['PIO_URL'])
     # Send the users to PredictionIO.
     User.find_each do |user|
       client.set_user(user.id)

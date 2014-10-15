@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Environment Variables (Should go first!)
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
