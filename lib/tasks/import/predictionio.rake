@@ -2,6 +2,7 @@ namespace :import do
   desc 'Send the data to PredictionIO'
   task predictionio: :environment do
     client = PredictionIO::EventClient.new(ENV['PIO_APP_ID'].to_i, ENV['PIO_EVENT_SERVER_URL'])
+
     # Send the users to PredictionIO.
     User.find_each do |user|
       begin
