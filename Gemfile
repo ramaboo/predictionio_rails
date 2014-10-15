@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.3'
 
 # Environment Variables (Should go first!)
 gem 'dotenv-rails', groups: [:development, :test]
@@ -37,3 +38,7 @@ gem 'bootstrap-sass'
 
 # PredictionIO
 gem 'predictionio'
+
+# For Heroku
+gem 'rails_12factor'
+gem 'unicorn'
