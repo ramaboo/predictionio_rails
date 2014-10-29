@@ -37,7 +37,7 @@ gem 'pg'
 gem 'bootstrap-sass'
 
 # PredictionIO
-gem 'predictionio'
+gem 'predictionio', path: '/var/www/PredictionIO-Ruby-SDK/'
 
 # For Heroku
 gem 'rails_12factor'
